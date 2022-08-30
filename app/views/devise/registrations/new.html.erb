@@ -1,0 +1,39 @@
+<div class="sign_up_container">
+<h2><%= t('.sign_up') %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= bootstrap_devise_error_messages! %>
+
+  <div class= "field">
+   <%= f.label :必須, {class: 'must_logo'}%>
+    <!-- 必須マークの付け方を上記のようにしていますが合っておりますでしょうか? -->
+    <%= f.text_field :user_name, autocomplete: "user_name", placeholder: "ユーザー名", class: 'user_register_menu' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :必須, {class: 'must_logo'} %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "メールアドレス", class: 'user_register_menu'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :必須, {class: 'must_logo'}%>
+    <% if @minimum_password_length %>
+   <!-- <em>(<%= @minimum_password_length %> characters minimum)</em> -->
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "パスワード" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :必須, {class: 'must_logo'}%>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード確認" %>
+  </div>
+
+   <div class="actions">
+    <%= f.submit "新しいアカウントを作成", class: 'user_register_button'%>
+  </div>
+ <% end %>
+
+ <div class="sign_up_menu">
+  <%= render "devise/shared/links" %>
+ </div>
+ </div>

@@ -1,0 +1,40 @@
+<div class= "new_reservation_container">
+  <h2 class="title_logo_2">予約内容確認</h2>
+  <h2>¥<%= @rooms.price %>/日</h2>
+  <%= form_with model: @reservations do |f| %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :room_id, value: @reservations.room.id %>
+  <%= f.hidden_field :member, value: @reservations.member %>
+
+  <div class= "reserve_start_field">
+    <%= f.label :start_date ,"開始日" %><br>
+    <%= f.text_field :start_date, :readonly => true, class: 'reserve_total_check'	%>
+   </div>
+
+   <div class= "reserve_end_field">
+    <%= f.label :end_date ,"終了日" %><br>
+      <%= f.text_field :end_date, :readonly => true, class: 'reserve_total_check'%>
+   </div>
+
+   <div class= "total_day">
+    <h5>使用日数：<%= @days %></h5>
+   </div>
+
+   <div class= "reserve_check_member">
+    <h5>人数：<%= @reservations.member %></h5>
+   </div>
+
+   <div class= "reserve_price_check">
+     <%= f.label :total_price ,"合計金額" %><br>
+      <%= f.number_field :total_price, value: @total_price, :readonly => true, class: 'reserve_total_check' %>
+    </div>
+
+    <p class="reserve_message">上記内容でよろしければ予約を確定してください</p>
+
+   <div class="reserve_check">
+    <%= f.submit "予約を確定する", class: 'reserve_decision_button' %>
+    <% end %>
+   </div>
+   <%= link_to "ルーム詳細に戻る", room_path(@rooms.id), class: 'reserve_back_button' %>
+
+  </div>
