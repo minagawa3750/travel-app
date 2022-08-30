@@ -1,7 +1,7 @@
 class Room < ApplicationRecord
   validates :name, presence: true
   validates :introduction, presence: true
-  validates :price, numericality: true
+  validates :price, numericality: {greater_than_or_equal_to: 0}
   validates :address, presence: true
   validates :image,presence: true
 

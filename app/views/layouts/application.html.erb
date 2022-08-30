@@ -50,7 +50,9 @@
           <% end %>
 
   </header>
-   <%= render 'shared/flash_message' %>
+  <% if flash[:notice] %>
+     <p class="notice"><%= flash[:notice] %></p>
+   <% end %>
 
     <%= yield %>
 

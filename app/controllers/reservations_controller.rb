@@ -4,10 +4,18 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @rooms = Room.find(params[:reservation][:room_id])
     @reservations = Reservation.new(reservation_params)
-    @total_price = @rooms.price * @reservations.member * (@reservations.end_date - @reservations.start_date).to_i
-    @days = (@reservations.end_date - @reservations.start_date).to_i
+    if @reservations.valid?
+      @rooms = Room.find(params[:reservation][:room_id])
+      @days = (@reservations.end_date - @reservations.start_date).to_i
+      @total_price = @rooms.price * @reservations.member * (@reservations.end_date - @reservations.start_date).to_i
+    else
+      flash[:alert] = "予約できない条件が入力されています。"
+      @users = current_user
+      @rooms = Room.find(params[:reservation][:room_id])
+      @reservations = Reservation.new
+      render template: "rooms/show"
+    end
   end
 
   def create
@@ -16,7 +24,7 @@ class ReservationsController < ApplicationController
     @total_price = @rooms.price * @reservations.member * (@reservations.end_date - @reservations.start_date).to_i
     @days = (@reservations.end_date - @reservations.start_date).to_i
     if @reservations.save
-      flash[:notice] = "予約が完了しました"
+      flash[:notice] = "予約が完了しました。"
       redirect_to reservation_path(@reservations.id)
     else
       render "new"

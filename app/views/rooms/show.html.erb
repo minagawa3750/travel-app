@@ -1,3 +1,6 @@
+<% if flash[:alert] %>
+   <p class="alert"><%= flash[:alert] %></p>
+ <% end %>
 <div class ="rooms_show_container">
   <div class = "rooms_intro_container">
     <%= image_tag @rooms.image.url, :size => '700x400', class: "show_room_image" %>
@@ -20,8 +23,10 @@
   </div>
   </div>
 
+
 <div class= "reserve_menu">
  <%= form_with model: @reservations, method: :get, url: new_reservation_path do |f| %>
+ <%= render "shared/error", obj: @reservations %>
  <%= f.hidden_field :room_id, value: @rooms.id %>
  <%= f.hidden_field :user_id, value: current_user.id %>
   <h1>¥<%= @rooms.price %>/日</h1>
@@ -37,8 +42,7 @@
 
    <div class= "reserve_member_field">
      <%= f.label :member ,"人数" %><br>
-     <%= f.number_field :member, class: 'reserve_member', required: true %>
-
+     <%= f.number_field :member, required: true, class: 'reserve_member' %>
    </div>
 
   <%= f.submit "この日程で予約する", class: 'reserve_check_button' %>
