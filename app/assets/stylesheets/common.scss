@@ -1,0 +1,585 @@
+/* --------- ヘッダーとフッダー---------*/
+header {
+  background-color: #000;
+  height: 70px;
+  width: 100%;
+
+}
+
+.header_left_nav {
+  display: flex;
+}
+
+.header_search_field {
+  margin-top: 20px;
+  height: 40px;
+  width: 200px;
+}
+
+.header_right_nav {
+  float: right;
+  margin-top: -40px;
+  margin-right: 10px;
+}
+
+.right_nav_1 {
+  background-color: #5D99FF;
+  color: #FFF;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+}
+
+.right_nav_2 {
+  background-color: #AAAAAA;
+  color: #FFF;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+}
+
+.header_user_name {
+  color: #FFF;
+  display: inline-block;
+}
+
+.dropdown {
+  margin-top: -35px;
+}
+
+footer {
+  color: #FFF;
+  width: 100%;
+  background-color: #000;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* ----------------------*/
+
+
+/* --------- deviseとuser ---------*/
+
+
+.field {
+  text-align: center;
+}
+
+.user_register_menu {
+  padding: 10px 200px 10px 5px;
+  margin-bottom: 10px;
+}
+
+.actions {
+  text-align: center;
+}
+
+input[type="email"] {
+  padding: 10px 200px 10px 5px;
+  margin-bottom: 10px;
+}
+
+input[type="password"] {
+  padding: 10px 200px 10px 5px;
+  margin-bottom: 10px;
+}
+
+.edit_back_button {
+  padding: 10px 100px 10px 100px;
+  background-color: #CCCCCC;
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.user_profile_button_container, .edit_user_button_container {
+  text-align: center;
+}
+
+.sign_up_menu, .sign_in_menu {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sign_up_container, .sign_in_container, .edit_user_container{
+  margin: 2em auto;
+  padding: 1em;
+  width: 40%;
+  max-width: 100%;
+  border: 1px solid #ccc; /* 枠線 */
+}
+
+.form-group {
+  text-align: center;
+}
+
+.user_icon {
+  text-align: center;
+}
+
+.user_image {
+  border-radius: 50%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.alert {
+  background-color: #00BFFF;
+  color: #FFF;
+  margin-top: 0;
+  text-align: center;
+}
+
+p.alert.alert-notice, p.alert.alert-alert {
+  margin-bottom: 0;
+  font-size: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+
+/*----------------------------------*/
+
+
+/*-------------テーブル、ボタン、共通デザイン----------*/
+.user_register_button, .user_login_button, .room_register_button,
+.reserve_decision_button, .reserve_check_button, .user_profile_button,
+.edit_user_button, .edit_submit_btn {
+   padding: 10px 100px 10px 100px;
+   background-color: #2C7CFF;
+   color: #FFF;
+   margin-bottom: 10px;
+}
+
+.top_search_btn {
+  height: 40px;
+  width: 100%;
+  background-color: #2C7CFF;
+  color: #FFF;
+  margin-top: 20px;
+}
+
+
+.must_logo {
+  background-color: #FF6666;
+  color: #FFF;
+  padding: 5px 8px 5px 8px;
+  border-radius: 10px;
+}
+
+.room_show_table, .register_room_table, .room_new_table,
+.room_index_table, .user_profile {
+    margin: 3px auto;    /* 上下3px 左右auto */
+}
+
+.reservation_show_container, .user_account_table {
+  margin: 3px auto;
+  margin-top: 100px;
+  margin-bottom: 250px;
+  width: 700px;
+}
+
+.room_register_container, .user_profile_field, .user_account_container {
+  background-color: #DDDDDD;
+  background-size: cover;
+  width: 100%;
+  height: 780px;
+  padding-top: 20px;
+}
+
+.room_register_main_container, .user_profile_menu, .user_account_field {
+  text-align: center;
+  max-width: 880px;
+  background-color: #fff;
+  border: 1px solid #eaedef;
+  margin: auto;
+}
+
+.room_register_menu, .profile_name_bar {
+  width: 100%;
+  height: 30px;
+}
+
+.text_logo_1, .text_logo_2, .text_logo_3 {
+  text-align: center;
+}
+
+table th {
+ padding: 10px;
+ border-bottom: solid 4px #778ca3;
+ color: #778ca3
+ }
+
+ table td {
+  padding: 10px;
+  border-bottom: solid 1px #778ca3;
+
+ }
+
+
+.field_with_errors {
+display: contents;
+}
+
+.must::after {
+  content: "必須";
+  background-color: #FF6666;
+  color: #FFF;
+  padding: 5px 8px 5px 8px;
+  border-radius: 10px;
+  font-size: 6px;
+  margin-left: 5px;
+}
+
+textarea {
+  width: 350px;
+  padding-bottom: 150px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.must_logo {
+  background-color: #FF6666;
+  color: #FFF;
+  padding: 5px 8px 5px 8px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input[type="date"] {
+  width: 70%;
+  height: 30px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 10px 15px 20px;
+  text-align: center;
+}
+
+div.row {
+ margin:0 auto;
+}
+
+
+.error_message_container {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.error_message {
+  font-size: 12px;
+  color: red;
+}
+
+.channel-menu {
+  position: fixed;
+  top: 0;
+  @media screen and (max-width: 600px) {
+    position: inherit;
+    margin-left: 0;
+  }
+}
+
+.channel-menu_name {
+  display: inline-block;
+  padding: 0 0.5rem 0 1.5rem;
+  color: #555459;
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 53px;
+  cursor: pointer;
+  @media screen and (max-width: 600px) {
+    padding-left: 0;
+  }
+}
+.channel_name .prefix {
+  margin-right: 8px;
+}
+
+.channel-menu_prefix {
+  padding-right: 0.5rem;
+  font-weight: 500;
+}
+.channel-menu_date {
+  font-weight: bold;
+}
+.channel-menu h3 {
+  float: right;
+  padding-right: 0.1rem;
+  font-weight: 500;
+}
+.listings {
+  min-height: 100vh;
+  height: 100%;
+  width: 220px;
+  float: left;
+  color: #ab9ba9;
+  background-color: #FFF;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 10;
+  @media screen and (max-width: 600px) {
+    display: none;
+    position: absolute;
+    &.show {
+      display: block;
+    }
+  }
+}
+
+.listings_channels {
+  margin: 1rem 0 2rem;
+}
+
+.listings_header {
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  margin: 0 1rem 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ab9ba9;
+  width: 165px;
+  position: relative;
+}
+
+.channel_list {
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+  color: #C0C0C0;
+}
+
+.channel {
+  height: 24px;
+  line-height: 24px;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding-right: 17px;
+  color: #ffffff;
+  padding-left: 1rem;
+  a {
+    color: #C0C0C0;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+  }
+  a:hover {
+    color: #eee;
+  }
+}
+
+.channel.active {
+  background: #CCFFFF	;
+}
+
+.notice {
+  color: #FFF;
+  text-align: center;
+  margin-top: 0;
+  background-color: #2C7CFF;
+  margin-bottom: 0;
+}
+
+.alert {
+  color: #FFF;
+  text-align: center;
+  margin-top: 0;
+  background-color: #FF6699;
+}
+
+
+/*-----------------------------*/
+
+
+/*----------rooms----------*/
+.registration_price {
+  height: 20px;
+  width: 350px;
+}
+
+.rooms_intro_container {
+  margin: 40px;
+}
+
+ .room_intro_1 {
+   display: block;
+ }
+
+.room_intro_2 {
+  margin-left: 20px;
+}
+
+.room_show_name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.room_show_address {
+  font-size: 13px;
+}
+
+.room_show_introduction {
+   margin-top: 80px;
+   margin-left: -50px;
+   font-size: 15px;
+   border-top: 1px solid #eaedef;
+   border-bottom: 1px solid #eaedef;
+   padding: 30px 600px 30px 20px;
+ }
+
+ .room_intro_show {
+   display: flex;
+   margin-top: 30px;
+ }
+
+ .rooms_show_container {
+   display: flex;
+ }
+
+
+ .room-flame {
+   border: 1px solid #e2e2e2;
+   margin-bottom: 10px;
+ }
+
+/*----------------------------*/
+
+
+/*---------top-----------*/
+
+.top-container {
+  background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+}
+
+
+.top-main {
+  box-sizing: border-box;
+  display: flex;
+  width: 60%;
+}
+
+.form_area_container {
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 24px;
+  background-color: #fff;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.form_text {
+  margin-top: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.top_header_search_field {
+  margin-top: 5px;
+  width: 100%;
+  height: 40px;
+}
+
+.area_logo {
+position: absolute;
+color: #FFF;
+bottom: 20px;
+font-weight: bold;
+text-align: center;
+margin: auto;
+left: 0;
+right: 0;
+}
+
+.top_area_container {
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.top_area_title {
+  margin-top: 10px;
+  margin-left: 200px;
+}
+/*----------------------------*/
+
+
+/*------reservations------------*/
+.reserve_menu {
+  margin: 2em auto;
+  padding: 1em;
+  width: 40%;
+  max-width: 100%;
+  border: 1px solid #ccc; /* 枠線 */
+}
+
+
+.reserve_member {
+  width: 70%;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.new_reservation_container {
+  margin: 2em auto;
+  padding: 1em;
+  width: 40%;
+  max-width: 100%;
+  border: 1px solid #ccc; /* 枠線 */
+}
+
+.reserve_total_check {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color: #CCCCCC;
+}
+
+
+.reserve_decision_button {
+  padding: 10px 100px 10px 100px;
+  background-color: #2C7CFF;
+  color: #FFF;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.reserve_back_button {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  background-color: #888888;
+  color: #FFF;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.reserve_message {
+  text-align: center;
+  font-weight: bold;
+}
+
+/*----------------------------*/

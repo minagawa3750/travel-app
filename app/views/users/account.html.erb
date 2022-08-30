@@ -1,0 +1,26 @@
+<%= render "shared/sidebar" %>
+
+
+<div class="user_account_container">
+<div class= "user_account_field">
+<h1 class ="title_logo_1">アカウント</h1>
+
+<table class= "user_account_table">
+<tr class= "field">
+  <th>メールアドレス</th>
+  <td><%= @user.email %></td>
+</tr>
+
+<tr class= "field">
+  <th>パスワード</th>
+  <td> *********</td>
+</tr>
+</table>
+
+<ul>
+  <li class= "edit_user_button_container">
+    <%= link_to"編集", :edit_user_registration, class: "edit_user_button" %>
+  </li>
+</ul>
+</div>
+</div>

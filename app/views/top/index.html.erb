@@ -1,0 +1,42 @@
+<div class="top_main_container">
+<div class="top-container">
+ <div class="top-main">
+  <div class="form_area_container">
+   <div class="form_area">
+    <p class= "form_text">Minapan Shareでまだ体験した<br>ことのない旅をしようぜ</p>
+     <%= form_with url: search_rooms_path, method: :get, local: true do |f| %>
+     <%= f.label :addresss ,"エリア" %><br>
+     <%= f.search_field :address, placeholder: "例）東京", class:"top_header_search_field" %><br>
+     <%= f.submit "探す", class: "top_search_btn" %>
+     <% end %>
+   </div>
+  </div>
+ </div>
+ </div>
+
+ <h3 class= "top_area_title">
+   おすすめのエリア
+ </h3>
+ <div class= "top_area_container">
+  <div class="row">
+    <div class="panel-item col-lg-3 col-6">
+      <span class="area_logo">東京</span>
+       <%= link_to image_tag("https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg", size:'231x360'),search_rooms_path(address: "東京")  %>
+    </div>
+
+    <div class="panel-item col-lg-3 col-6">
+      <span class="area_logo">大阪</span>
+       <%= link_to image_tag("https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg", size:'231x360'), search_rooms_path(address: "大阪")  %>
+    </div>
+
+    <div class="panel-item col-lg-3 col-6">
+      <span class="area_logo">神奈川</span>
+       <%= link_to image_tag("https://cdn.jalan.jp/jalan/img/9/kuchikomi/0689/KL/d33c6_0000689469_1.jpg", size:'231x360'), search_rooms_path(address: "神奈川")  %>
+    </div>
+
+    <div class="panel-item col-lg-3 col-6">
+      <span class="area_logo">栃木</span>
+       <%= link_to image_tag("https://yakei-fan.com/images/yakei/tochigi/pic_utsunomiya-castle01.jpg", size:'231x360'), search_rooms_path(address: "栃木")  %>
+    </div>
+  </div>
+  </div>

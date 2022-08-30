@@ -1,0 +1,31 @@
+<div class="sign_in_container">
+<h2>ログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+　<div class="field">
+    <%= f.label :必須, {class: 'must_logo'} %>
+    <%= f.email_field :email,  autocomplete: "email", placeholder: "メールアドレス" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :必須, {class: 'must_logo'}%>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "パスワード" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "ログイン", class: 'user_login_button' %>
+  </div>
+<% end %>
+
+ <div class="sign_in_menu">
+  <%= render "devise/shared/links" %>
+ </div>
+</div>

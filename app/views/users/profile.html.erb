@@ -1,0 +1,40 @@
+<%= render "shared/sidebar" %>
+
+<div class="user_profile_field">
+  <div class="user_profile_menu">
+  <h2 class="title_logo_2">プロフィール</h2>
+  <%= form_with model:@user do |f| %>
+   <div class="user_icon">
+     <% if @user.user_image? %>
+      <%= image_tag @user.user_image.url, :size => '100x100', class:"user_image" %>
+      <% else %>
+      <%= image_tag ('https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg'),
+        :size => '100x100', class:"user_image" %>
+     <% end %>
+   </div>
+
+  <table class= "user_profile">
+    <tr class= "user_profile_1">
+     <th> <%= f.label :user_image ,"アイコン画像", class: 'must'%></th>
+     <td><%= f.file_field :user_image, required: true	%></td>
+    </tr>
+
+   <tr class= "user_profile_2">
+     <th><%= f.label :user_name ,"名前", class: 'must'  %></th>
+     <td><%= f.text_field :user_name, value: @user.user_name, required: true, class:"profile_name_bar" %></td>
+   </tr>
+
+  <tr class="user_profile_3">
+    <th><%= f.label :user_introduction, "自己紹介", class: 'must'  %></th>
+    <td><%= f.text_area :user_introduction, value: @user.user_introduction, required: true %></td>
+  </tr>
+  </table>
+
+  <div class= "user_profile_button_container">
+    <ul>
+      <li><%= f.submit "更新", class: 'user_profile_button'%></li>
+    </ul>
+  </div>
+    <% end %>
+  </div>
+ </div>

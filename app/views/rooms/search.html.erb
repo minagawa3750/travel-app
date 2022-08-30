@@ -1,0 +1,18 @@
+<div class="search-filed-container">
+
+ <h1 class="text_logo_1">検索結果：<%= @rooms.count %>件</h1>
+   <div class="row">
+     <% @rooms.each do |room| %>
+     <div class= "col-sm-6 col-lg-4 col-xl-3">
+       <div class= "room-flame">
+         <%= image_tag room.image.url, :size => '300x200', alt: "ルーム画像", class: "room_search_image" %>
+       <div class="search_menu">
+         <p><%= link_to "#{room.name}", room %></p>
+         <p><%= room.address %></p>
+         <p>¥<%= room.price %></p>
+       </div>
+       </div>
+    </div>
+    <% end %>
+  </div>
+</div>

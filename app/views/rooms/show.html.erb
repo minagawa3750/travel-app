@@ -1,0 +1,51 @@
+<% if flash[:alert] %>
+   <p class="alert"><%= flash[:alert] %></p>
+ <% end %>
+<div class ="rooms_show_container">
+  <div class = "rooms_intro_container">
+    <%= image_tag @rooms.image.url, :size => '700x400', class: "show_room_image" %>
+
+<div class ="room_intro_show">
+  <div class ="room_intro_1">
+    <% if @users.user_image? %>
+     <%= image_tag @users.user_image.url, :size => '100x100', class:"user_image" %>
+     <% else %>
+     <%= image_tag ('https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpg'),
+       :size => '100x100', class:"user_image" %>
+    <% end %>
+    </div>
+
+    <div class= "room_intro_2">
+      <p class= "room_show_name"><%= @rooms.name %></p>
+      <p class= "room_show_address"><%= @rooms.address %></p>
+      <p class= "room_show_introduction"><%= @rooms.introduction %></p>
+    </div>
+  </div>
+  </div>
+
+
+<div class= "reserve_menu">
+ <%= form_with model: @reservations, method: :get, url: new_reservation_path do |f| %>
+ <%= render "shared/error", obj: @reservations %>
+ <%= f.hidden_field :room_id, value: @rooms.id %>
+ <%= f.hidden_field :user_id, value: current_user.id %>
+  <h1>¥<%= @rooms.price %>/日</h1>
+   <div class= "reserve_start_field">
+    <%= f.label :start_date ,"開始日" %><br>
+      <%= f.date_field :start_date, required: true %>
+   </div>
+
+   <div class= "reserve_end_field">
+    <%= f.label :end_date ,"終了日" %><br>
+      <%= f.date_field :end_date, required: true %>
+   </div>
+
+   <div class= "reserve_member_field">
+     <%= f.label :member ,"人数" %><br>
+     <%= f.number_field :member, required: true, class: 'reserve_member' %>
+   </div>
+
+  <%= f.submit "この日程で予約する", class: 'reserve_check_button' %>
+  <% end %>
+</div>
+</div>

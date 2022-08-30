@@ -1,0 +1,22 @@
+<h1 class="title_logo_1">予約内容</h1>
+ <table class= "reservation_show_container">
+     <tr class= "field">
+       <th>予約した部屋</th>
+       <td><%= @reservations.room.name %></td>
+     </tr>
+
+     <tr class= "field">
+       <th>開始日</th>
+       <td><%= @reservations.start_date %></td>
+     </tr>
+
+     <tr class= "field">
+       <th>終了日</th>
+       <td><%= @reservations.end_date%></td>
+     </tr>
+
+     <tr class= "field">
+       <th>価格</th>
+       <td><%= @total_price %>円</td>
+     </tr>
+    </table>
